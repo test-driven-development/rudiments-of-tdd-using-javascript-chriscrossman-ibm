@@ -1,6 +1,6 @@
 // a palindrome: a word or phrase that is the same forwards or backwards.
-let isPalindrome = () => {
-  return true;
+let isPalindrome = (strang) => {
+  return strang === strang.split('').reverse().join('');
 };
 
 describe('the canary spec for palindrome feature', () => {
@@ -11,10 +11,14 @@ describe('the canary spec for palindrome feature', () => {
 
 describe('isPalindrome of', () => {
   it('"mom": true', () => {
-      isPalindrome('mom').should.be.true();
-    });
+    isPalindrome('mom').should.be.true();
+  });
 
-  it('"brother": false');
+  it('"brother": false', () => {
+    isPalindrome('brother').should.be.false();
+  });
+
+
   it('"Mom": false');
   it('null: false');
   it('"": false');
