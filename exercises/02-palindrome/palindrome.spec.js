@@ -16,7 +16,10 @@ describe('isPalindrome of', () => {
     isPalindrome('brother').should.be.false();
   });
 
-  it('"Mom": false');
+  it('"Mom": False', () => {
+    isPalindrome('Mom').should.be.false();
+  });
+
   it('null: false');
   it('"": false');
   it('"      ": false');
